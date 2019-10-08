@@ -3,9 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
-    android:background="#000000">
+    tools:context=".MainActivity">
+<!--    android:background="#000000">-->
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/findRestaurantsbutton"
+        android:layout_marginBottom="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/resto8">
+
+    </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,14 +24,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:text="MyRestaurants"
+        android:id="@+id/appNameTextView"
         android:textColor="@color/colorTextIcons"
-        android:textSize="40sp"/>
+        android:textSize="40sp"
+        android:textStyle="bold"/>
 
     <Button
+        android:id="@+id/findRestaurantsbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Find Restaurants"/>
+        android:text="Find Restaurants"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorTextIcons"/>
 
 </RelativeLayout>
