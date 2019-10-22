@@ -1,8 +1,12 @@
 
-package com.example.myfirstapp;
+package com.example.myfirstapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import org.parceler.Parcel;
+
+@Parcel
 
 public class Location {
 
@@ -110,6 +114,11 @@ public class Location {
 
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s, %s %s", this.address1, this.city, this.state, this.zipCode);
     }
 
 }
